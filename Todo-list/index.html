@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>To-Do List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1 class="display-5 text-center mb-3 mt-3"><i class="fas fa-list-ul"></i><span class="part-header">Rupankar's</span> To-Do List </h1>
+                <br>
+                <form class="form-inline offset-2">
+                    <div class="form-group">
+                        <input type="text" autocomplete="off" placeholder="Enter Actitvity....." class="form-control form-control-lg" id="todo-inp">
+                        <span class="input-group-btn ml-3">
+                            <button type="button" class="btn btn-outline-dark btn-light" id="todo-btn"><i class="fas fa-plus-circle"></i></button>
+                        </span>
+                    </div>
+                </form>
+                <br>
+                <div class="todo-container">
+                    <ul class="todo-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./main.js'></script>
+</body>
+</html>
