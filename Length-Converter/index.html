@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Length Converter App</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css">
+body{
+    background-color: #483D8B;
+    color: #FFFFFF;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1 class="display-4 text-center mb-3 mt-3">Length Converter</h1>
+                <form>
+                     <div class="form-group">
+                         <input type="number" class="form-control form-control-lg" id="cmInput" placeholder="Enter length in centimeters....">
+                     </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-primary text-light">
+                        <h5 class="pl-3 pt-1 pb-1">Meters....</h5>
+                        <div id="MtOutput" class="pl-3 pb-2"></div>
+                    </div>
+                    <br>
+                    <div class="card bg-danger text-light">
+                        <h5 class="pl-3 pt-1 pb-1">Kilometers....</h5>
+                        <div id="KmOutput" class="pl-3 pb-2"></div>
+                    </div>
+                    <br>
+                    <div class="card bg-success text-white">
+                        <h5 class="pl-3 pt-1 pb-1">Inches....</h5>
+                        <div id="InchOutput" class="pl-3 pb-2"></div>
+                    </div>
+                    <br>
+                    <div class="card bg-warning text-dark">
+                        <h5 class="pl-3 pt-1 pb-1">Feets....</h5>
+                        <div id="FtOutput" class="pl-3 pb-2"></div>
+                    </div>
+                    <br>
+                    <div class="card bg-info text-dark">
+                        <h5 class="pl-3 pt-1 pb-1">Miles....</h5>
+                        <div id="MlOutput" class="pl-3 pb-2"></div>
+                    </div>
+                    <br>
+                    <div class="card bg-dark text-light">
+                        <h5 class="pl-3 pt-1 pb-1">Yards....</h5>
+                        <div id="YdOutput" class="pl-3 pb-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    document.getElementById("output").style.visibility="hidden";
+    document.getElementById("cmInput").addEventListener("input",function(e){
+    document.getElementById("output").style.visibility="visible";
+    let cm = e.target.value;
+    document.getElementById("MtOutput").innerHTML=cm/100;
+    document.getElementById("KmOutput").innerHTML=cm/100000;
+    document.getElementById("InchOutput").innerHTML=cm/2.54;
+    document.getElementById("FtOutput").innerHTML=cm/30.48;
+    document.getElementById("MlOutput").innerHTML=cm/160934;
+    document.getElementById("YdOutput").innerHTML=cm/91.44;
+    }
+    )
+</script> 
+</body>
+</html>
