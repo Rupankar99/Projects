@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Chat App</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>WebChat <i class="fas fa-comments"></i></h1>
+    <ul class="feed"></ul>
+    <div class="container"><span class="join-text">Join the chat now!!!</span></div>
+    <div class="feedback"></div>
+    <form id="inp-form" action="#">
+        <input type="text" placeholder="Enter name...." autocomplete="off" id="inp">
+        <button type="submit" id="join-btn">Join</button>
+        <button type="submit" id="send-btn" class="hidden"><i class="fas fa-paper-plane"></i></button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
